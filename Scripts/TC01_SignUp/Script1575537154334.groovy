@@ -11,6 +11,8 @@ import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+
+import common.util.xorkeyword
 import internal.GlobalVariable as GlobalVariable
 
 try {
@@ -22,25 +24,25 @@ try {
 	
 	WebUI.verifyTextPresent("PHPTRAVELS", false)
 	
-	WebUI.click(findTestObject('Object Repository/Page_PHPTRAVELS  Travel Technology Partner/a_My Account'))
-	WebUI.click(findTestObject('Object Repository/Page_PHPTRAVELS  Travel Technology Partner/a_My Account (1)'))
-	WebUI.click(findTestObject('Object Repository/Page_PHPTRAVELS  Travel Technology Partner/a_My Account (1)'))
+	xorkeyword.xorClick(findTestObject('Object Repository/Page_PHPTRAVELS  Travel Technology Partner/a_My Account'))
+	xorkeyword.xorClick(findTestObject('Object Repository/Page_PHPTRAVELS  Travel Technology Partner/a_My Account (1)'))
+	xorkeyword.xorClick(findTestObject('Object Repository/Page_PHPTRAVELS  Travel Technology Partner/a_My Account (1)'))
 	
-	WebUI.click(findTestObject('Object Repository/Page_PHPTRAVELS  Travel Technology Partner/a_Sign Up'))
+	xorkeyword.xorClick(findTestObject('Object Repository/Page_PHPTRAVELS  Travel Technology Partner/a_Sign Up'))
 	
-	WebUI.click(findTestObject('Object Repository/Page_Register/input_First Name_firstname'))
+	xorkeyword.xorClick(findTestObject('Object Repository/Page_Register/input_First Name_firstname'))
 	
 	WebUI.setText(findTestObject('Object Repository/Page_Register/input_First Name_firstname'), 'Bhawna')
 	
-	WebUI.click(findTestObject('Object Repository/Page_Register/input_Last Name_lastname'))
+	xorkeyword.xorClick(findTestObject('Object Repository/Page_Register/input_Last Name_lastname'))
 	
 	WebUI.setText(findTestObject('Object Repository/Page_Register/input_Last Name_lastname'), 'Pathak')
 	
-	WebUI.click(findTestObject('Object Repository/Page_Register/input_Mobile Number_phone'))
+	xorkeyword.xorClick(findTestObject('Object Repository/Page_Register/input_Mobile Number_phone'))
 	
 	WebUI.setText(findTestObject('Object Repository/Page_Register/input_Mobile Number_phone'), '123456')
 	
-	WebUI.click(findTestObject('Object Repository/Page_Register/input_Email_email'))
+	xorkeyword.xorClick(findTestObject('Object Repository/Page_Register/input_Email_email'))
 	
 	WebUI.setText(findTestObject('Object Repository/Page_Register/input_Email_email'), 'abc@gmail.com')
 	
