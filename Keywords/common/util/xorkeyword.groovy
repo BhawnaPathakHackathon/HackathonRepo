@@ -52,54 +52,6 @@ public class xorkeyword {
 	 */
 	@Keyword
 	static def xorClick(TestObject to ) {
-		WebElement element = null;
-		try {
-			TestObject parentObject = to.getParentObject()
-			WebUiBuiltInKeywords.waitForElementClickable(to, 200)
-			WebUiBuiltInKeywords.scrollToElement(to, 200)
-			WebUiBuiltInKeywords.waitForElementVisible(to,200)
-			if(parentObject) {
-				switchIframe(parentObject)
-			}
-			element = WebUiBuiltInKeywords.findWebElement(to);
-
-			KeywordUtil.logInfo("Clicking element")
-			WebUiBuiltInKeywords.click(to)
-			if(parentObject){
-				switchToDefaultFrame()
-			}
-
-			KeywordUtil.markPassed("Element has been clicked")
-		} catch (WebElementNotFoundException e) {
-			String message = "Element not found :" + to.toString() + "\n"
-			String testElement = "Test Element : " +  element.toString() + "\n\n"
-			String stacktrace = "Stack Trace : " + e.toString() + "\n\n"
-			KeywordUtil.markFailedAndStop(message + testElement + stacktrace)
-		} catch (Exception e) {
-			String message = "Fail to click on Object : " + to.toString() + "\n"
-			String testElement = "Test Element : " +  element.toString() + "\n\n"
-			String stacktrace = "Stack Trace : " + e.toString() + "\n\n"
-			KeywordUtil.markFailedAndStop(message + testElement + stacktrace)
-		}
-	}
-
-	/**
-	 * Switch to Parent Frame
-	 */
-	@Keyword
-	static def switchIframe(TestObject to) {
-		WebDriver driver = DriverFactory.getWebDriver();
-		WebElement element = WebUiBuiltInKeywords.findWebElement(to);
-		driver.switchTo().frame(element);
-	}
-
-
-	/**
-	 * Switch to Default Frame
-	 */
-	@Keyword
-	static def switchToDefaultFrame() {
-		WebDriver driver = DriverFactory.getWebDriver();
-		driver.switchTo().defaultContent();
+		WebUI.click(to)
 	}
 }
