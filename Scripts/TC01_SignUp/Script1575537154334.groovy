@@ -50,7 +50,7 @@ try {
 	
 	WebUI.setEncryptedText(findTestObject('Object Repository/Page_Register/input_Confirm Password_confirmpassword'), 'mdnvewzpQvY=')
 	
-	WebUI.click(findTestObject('Object Repository/Page_Register/button_Sign Up'))
+	xorkeyword.xorClick(findTestObject('Object Repository/Page_Register/button_Sign Up'))
 	
 } catch (Exception e) {
 	e.printStackTrace()
