@@ -25,8 +25,6 @@ try {
 	WebUI.verifyTextPresent("PHPTRAVELS", false)
 	
 	xorkeyword.xorClick(findTestObject('Object Repository/Page_PHPTRAVELS  Travel Technology Partner/a_My Account'))
-	xorkeyword.xorClick(findTestObject('Object Repository/Page_PHPTRAVELS  Travel Technology Partner/a_My Account (1)'))
-	xorkeyword.xorClick(findTestObject('Object Repository/Page_PHPTRAVELS  Travel Technology Partner/a_My Account (1)'))
 	
 	xorkeyword.xorClick(findTestObject('Object Repository/Page_PHPTRAVELS  Travel Technology Partner/a_Sign Up'))
 	
