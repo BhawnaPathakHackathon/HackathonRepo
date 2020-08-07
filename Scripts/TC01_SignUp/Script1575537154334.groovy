@@ -18,7 +18,8 @@ import internal.GlobalVariable as GlobalVariable
 try {
 	WebUI.openBrowser('')
 	
-	WebUI.navigateToUrl(GlobalVariable.url)
+	WebUI.navigateToUrl(GlobalVariable.SERVICEURL + '/Sourcing/Main?realm=' + GlobalVariable.SERVICEREALM)
+	WebUI.navigateToUrl("https://github.com/BhawnaPathakHackathon/HackathonRepo/edit/master/Scripts/TC01_SignUp/Script1575537154334.groovy")
 	
 	WebUI.maximizeWindow()
 	
